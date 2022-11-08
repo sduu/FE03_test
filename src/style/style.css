@@ -4,12 +4,21 @@ body {
     background: radial-gradient(96.74% 276.79% at 3.59% 5.28%, #f0f4ff 0%, #a5b6ee 100%);
 }
 
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
 [class^='btn-'] {
     width: 112px;
     height: 48px;
-    border: none;
     border-radius: 50px;
-    cursor: pointer;
 }
 
 [class^='btn-']::before {
@@ -33,7 +42,6 @@ body {
 
 [class^='btn-']:disabled {
     background-color: #324577;
-    cursor: default;
 }
 
 [class^='btn-']:disabled span {
@@ -73,8 +81,8 @@ body {
 .main-cont .timer {
     display: flex;
     position: relative;
-    border-top: 1px solid #3d538a;
     padding-top: 33px;
+    border-top: 1px solid #3d538a;
 }
 
 .main-cont .timer::before {
