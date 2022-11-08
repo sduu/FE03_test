@@ -91,9 +91,10 @@ class Timer {
             if ((this.second < 0 && this.minute) || this.hours) {
                 this.second = 59;
                 this.minute--;
-            } else if (this.minute < 0 && this.hours) {
-                this.minute = 59;
-                this.hours--;
+                if (this.minute < 0 && this.hours) {
+                    this.minute = 59;
+                    this.hours--;
+                }
             } else if (this.second < 0) {
                 this.second = 0;
                 this.stopTimer();
