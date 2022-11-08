@@ -88,7 +88,7 @@ class Timer {
         this.timer = setInterval(() => {
             this.second--;
 
-            if ((this.second < 0 && this.minute) || this.hours) {
+            if (this.second < 0 && (this.minute || this.hours)) {
                 this.second = 59;
                 this.minute--;
                 if (this.minute < 0 && this.hours) {
